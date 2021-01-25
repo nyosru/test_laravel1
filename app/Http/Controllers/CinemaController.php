@@ -35,8 +35,15 @@ class CinemaController extends Controller {
         // $show = \App\Models\Cinema::where( 'id' , '=' , $id )->get();
         $show = \App\Models\Cinema::find($id);
 
+        //echo '<pre>'; print_r($show); echo '</pre>';
+        
+        if( empty($show->header) ) {
+            // echo __LINE__;
+            return redirect()->route('index');
+        }
+        
         // dd($show->items->0);
-        // echo '<pre>'; print_r($show); echo '</pre>';
+        
         
         //$users = DB::table('users')
 //        $cinemas = \DB::table('cinemas')
