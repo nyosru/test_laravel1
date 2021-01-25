@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <img src="https://bootstrap-4.ru/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24"> © 2017-2020
+                <img src="https://bootstrap-4.ru/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24"> © {{ date('Y') }}
                 <br/>
                 <br/>
                 Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})            
@@ -44,4 +44,7 @@
         </div>
     </div>
 </footer>        
+    <div id="ytWidget" class="btn btn-outline-primary" style="position:fixed; bottom: 50px; right: 50px;" ></div>
+    <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=true" type="text/javascript"></script>
+
 
