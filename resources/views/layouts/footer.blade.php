@@ -1,12 +1,19 @@
-<hr>
-<footer style="padding: 3vh 0 5vh 0;">
+
+<footer style="padding: 3vh 0 5vh 0; border-top: 3px solid gray; margin-top: 100px; background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);">
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <img src="https://bootstrap-4.ru/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24"> © {{ date('Y') }}
+<!--                <img src="https://bootstrap-4.ru/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24"> © {{ date('Y') }}-->
+<!--                <a href="https://uralweb.info" target="_blank"  >
+                <img src="https://uralweb.info/9.site/my1807uralweb/download/img/logo-b.png" alt="" xwidth="24" height="48" /> 
+                </a>
+                <br/>-->
+                <nobr>Laravel v{{ Illuminate\Foundation\Application::VERSION }}</nobr>
                 <br/>
+                <nobr>PHP v{{ PHP_VERSION }}</nobr>
                 <br/>
-                Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})            
+                <nobr>© {{ date('Y') }}</nobr>
+
             </div>
             <!--        <div class="col">-->
             <!--            <h5>Ссылки</h5>-->
@@ -44,7 +51,7 @@
         </div>
     </div>
 </footer>        
-    <div id="ytWidget" class="btn btn-outline-primary" style="position:fixed; bottom: 50px; right: 50px;" ></div>
-    <script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=true" type="text/javascript"></script>
+<div id="ytWidget" class="btn btn-outline-primary" style="position:fixed; bottom: 160px; right: 50px;" ></div>
+<script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=true" type="text/javascript"></script>
 
 

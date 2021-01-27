@@ -39,9 +39,7 @@
         <p>{{ $info->opis }}</p>
         <br clear="all" />
         <br clear="all" />
-        <center>
-        <img src="{{ $info->link }}/images/background.jpg" style="xfloat:left; xpadding-right: 10px;" />
-        </center>
+            <img src="{{ $info->link }}/images/background.jpg" width="100%" />
     </div>
 </div>
 <!--</div>-->

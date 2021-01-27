@@ -11,9 +11,16 @@
         @include('layouts.header')
 
         <div class="container" style="min-height: 65vh;">
-        @yield('content')
+            <div class="row" style="margin-bottom: 1vh;" >
+                <div class="alert alert-info col text-center" >
+                    репозиторий с&nbsp;файлами этого сайта: <a href="https://github.com/nyosru/test_laravel1" target="_blank" >
+                        https://github.com/nyosru/test_laravel1
+                    </a>
+                </div>
+            </div>
+            @yield('content')
         </div>
-        
+
         @include('layouts.footer')
 
     </body>
