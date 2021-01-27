@@ -1,62 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Тестовое задание для PHP-программиста
+=====================================
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+JUNIOR-уровень
+--------------
 
-## About Laravel
+Измените существующий код так, чтобы на главной странице приложения было:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- текущее время и дата;
+- название класса контроллера, который отвечает за отображение этой страницы;
+- название метода контроллера, который отправляет данные на эту страницу;
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+MIDDLE-уровень
+--------------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Дополните существующий код так, чтобы:
 
-## Learning Laravel
+- в БД приложения были импортированы (с помощью консольной команды) **10 последних записей** (не больше) из [iTunes Movie Trailers](https://trailers.apple.com);
+- на главной странице приложения были показаны эти 10 записей. Каждая должна состоять из заголовка трейлера и постера;
+- заголовок каждой записи должен быть ссылкой на подробную страницу трейлера. На подробной странице кроме заголовка и постера должно быть описание трейлера и ссылка на источиник, а так же ссылка для возврата к странице списка;
+- имейте в виду, что приложение будет разворачиваться и тестироваться на независимом хосте — у вас должно быть описано, как запустить обновление БД и импорт данных;
+- будьте готовы объяснить ваше решение.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Дополнительные скилы
+--------------------
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Выполните все этапы для middle;
+- предложите другую схему получения rss и преобразования полученного в итоговый класс;
+- предожите схему валидации полей сущностей;
+- добавьте пользователей;
+- реализуйте отметки «Нравится» для загруженных трейлеров;
+- напишите тесты;
 
-## Laravel Sponsors
+------------------------
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### Несколько подсказок
 
-### Premium Partners
+- По возможности используйте docker для запуска приложения. Docker-compose.yaml готов к использованию;
+- для получения данных лучше всего использовать [RSS Feed](https://trailers.apple.com/trailers/home/rss/newtrailers.rss) сервиса;
+- не увлекайтесь внешним оформлением, но и не забывайте про него. Элементы должны быть расположены логично;
+- обращайте внимание на наличие (и обход) потенциальных ошибок;
+- ищите, что написано неправильно, исправляйте, если считаете нужным;
+- операции импорта должны быть идемпотентны;
+- используйте любые composer-пакеты на свой вкус.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+#### Критерии оценки
 
-## Contributing
+Будет оцениваться качество кода, цикломатическая сложность методов, стиль кода и суть предложенных решений. Любое исправление существующих ошибок даёт преимущество, любое изменение архитектуры в целом в лучшую сторону — ещё большее преимущество. Естественно, мы будем смотреть историю коммитов и изменений кода в процессе выполнения задачи.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Если вы не доделали задачу — покажите, что сделали, объясните, что планировалось и на чем застряли (если застряли). Если у вас есть предложения или комментарии по сути подобного проекта — обязательно опишите их, это так же будет преимуществом.
 
-## Code of Conduct
+Итог работы
+-----------
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Ваш код должен быть выгружен в любой общедоступный репозиторий и снабжен README-файлом, в котором вы опишете свою работу и инструкции, как запустить ваш проект. 
 
-## Security Vulnerabilities
+Ваша история коммитов покажет, как вы работали над заданием: к примеру, один коммит с заголовком, не отражающим сути работы, является недостатком.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Тестовые задания в виде архивов, ссылок на файловые хостинги и подобном (то есть **не** репозиторий) рассматриваться не будут. Ссылку на репозиторий и ваше имя необходимо отправить на электропочту [dmitry@ivanov.team](mailto:dmitry@ivanov.team) с темой письма «Тестовое задание».
