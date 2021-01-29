@@ -23,18 +23,19 @@
                 <nobr>© {{ date('Y') }}</nobr>
 
             </div>
-            <!--        <div class="col">-->
-            <!--            <h5>Ссылки</h5>-->
-            <ul class="list-unstyled text-small">
-                <!--          <li><a class="text-muted" href="#">Cool stuff</a></li>
-                          <li><a class="text-muted" href="#">Random feature</a></li>
-                          <li><a class="text-muted" href="#">Team feature</a></li>
-                          <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                          <li><a class="text-muted" href="#">Another one</a></li>
-                          <li><a class="text-muted" href="#">Last time</a></li>-->
-            </ul>
-            <!--        </div>
-                    <div class="col">
+            <div class="col">
+                <h5>Ссылки</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="{{ route('list-user') }}" class="text-muted">Список пользователей</a></li>
+                    <!--          <li><a class="text-muted" href="#">Cool stuff</a></li>
+                              <li><a class="text-muted" href="#">Random feature</a></li>
+                              <li><a class="text-muted" href="#">Team feature</a></li>
+                              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                              <li><a class="text-muted" href="#">Another one</a></li>
+                              <li><a class="text-muted" href="#">Last time</a></li>-->
+                </ul>
+            </div>
+            <!--            <div class="col">
                         <h5>Ссылки</h5>
                         <ul class="list-unstyled text-small">-->
             <!--          <li><a class="text-muted" href="#">Resource</a></li>

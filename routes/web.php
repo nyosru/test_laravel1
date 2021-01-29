@@ -1,23 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\CinemaController;
-
+use App\Http\Controllers\UsController;
 use Illuminate\Support\Facades\Auth;
 
-
-
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+  |--------------------------------------------------------------------------
+  | Web Routes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register web routes for your application. These
+  | routes are loaded by the RouteServiceProvider within a group which
+  | contains the "web" middleware group. Now create something great!
+  |
+ */
 
 
 
@@ -36,14 +33,9 @@ Route::get(
 )->name('index');
 
 Route::get(
-        '/aa/',
-        [CinemaController::class, 'index']
-)->name('index_user')->middleware('auth');
-
-Route::get(
-        '/di/',
-        [CinemaController::class, 'index']
-)->name('index_admin')->middleware('auth:admin');
+        '/list-user/',
+        [UsController::class, 'listUser']
+)->name('list-user');
 
 
 Route::get(
@@ -70,21 +62,34 @@ Auth::routes();
 //         Auth::logout();
 //         return redirect()->route('index');
 // })->middleware('auth');
+//Route::get(
+//        '/aa/',
+//        [CinemaController::class, 'index']
+//)->name('index_user')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
 
-        Route::get(
-                '/loading/',
-                [CinemaController::class, 'loading']
-        )->name('loading');
+    Route::get(
+            '/loading/',
+            [CinemaController::class, 'loading']
+    )->name('loading');
 
-        Route::get('/logout/', function () {
-                Auth::logout();
-                return redirect()->route('index');
-        });
+    Route::get('/logout/', function () {
+        Auth::logout();
+        return redirect()->route('index');
+    });
+
+    Route::get(
+            '/aa/',
+            [CinemaController::class, 'index']
+    )->name('index_user');
 
 });
 
+    Route::get(
+            '/di/',
+            [CinemaController::class, 'index']
+    )->name('index_admin')->middleware('auth:admin');
 
 
 
