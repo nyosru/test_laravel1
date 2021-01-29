@@ -12,6 +12,14 @@
 
         <div class="container" style="min-height: 65vh;">
             @yield('content')
+
+            <div class="row" >
+                <div class="col text-center alert alert-info" >
+                    Гит репозиторий файлов этого сайта: 
+                    <a href="https://github.com/nyosru/test_laravel1" target="_blank" >https://github.com/nyosru/test_laravel1</a>
+                </div>
+            </div>
+
         </div>
 
         @include('layouts.footer')
