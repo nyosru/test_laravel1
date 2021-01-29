@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CinemaController;
 
+use Illuminate\Support\Facades\Auth;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,21 +19,85 @@ use App\Http\Controllers\CinemaController;
 |
 */
 
+
+
+
+
+
 //Route::get('/', function () { 
 //    // return view('welcome');
 //    return view('view_items');
 //});
 
-Route::get('/', [ CinemaController::class, 'index' ] 
-        )->name('index');
 
-Route::get('/show/{id}', [ CinemaController::class, 'show' ] 
-        )->where('id', '[0-9]+')->name('show');
+Route::get(
+        '/',
+        [CinemaController::class, 'index']
+)->name('index');
 
-Route::get('/loading/', [ CinemaController::class, 'loading' ] 
+Route::get(
+        '/aa/',
+        [CinemaController::class, 'index']
+)->name('index_user')->middleware('auth');
+
+Route::get(
+        '/di/',
+        [CinemaController::class, 'index']
+)->name('index_admin')->middleware('auth:admin');
+
+
+Route::get(
+        '/show/{id}',
+        [CinemaController::class, 'show']
+)->where('id', '[0-9]+')->name('show');
+
+
+Auth::routes();
+
+
+
+
+
+
+
+
+
+// Route::get(
+//         '/loading/',
+//         [CinemaController::class, 'loading']
+// )->name('loading')->middleware('auth');
+// Route::get('/logout/', function () {
+//         Auth::logout();
+//         return redirect()->route('index');
+// })->middleware('auth');
+
+Route::group(['middleware' => 'auth'], function () {
+
+        Route::get(
+                '/loading/',
+                [CinemaController::class, 'loading']
         )->name('loading');
 
-//Route::get('/222/', function () { 
+        Route::get('/logout/', function () {
+                Auth::logout();
+                return redirect()->route('index');
+        });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    
 ////   $a = [];
 ////    for( $ee = 0; $ee <= 10; $ee++ ){
